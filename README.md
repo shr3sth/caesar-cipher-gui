@@ -1,6 +1,6 @@
 # Caesar Cipher Explorer
 
-A real-time Caesar Cipher GUI application built with Python and Tkinter.
+Interactive Caesar Cipher GUI application featuring real-time encryption and decryption using Python and Tkinter.
 
 ## Features
 
