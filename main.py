@@ -29,6 +29,16 @@ def update_output(event=None):
     output_text.config(state="disabled")
 
 
+def copy_output():
+    text = output_text.get("1.0", "end-1c")
+
+    root.clipboard_clear()
+
+    root.clipboard_append(text)
+
+    root.update()
+
+
 root = tk.Tk()
 
 root.title("Caesar Cipher Explorer")
@@ -100,6 +110,19 @@ output_text = tk.Text(
 )
 
 output_text.pack(pady=5)
+
+copy_button = tk.Button(
+    root,
+    text="📋 Copy Output",
+    command=copy_output,
+    bg="#3a3a3a",
+    fg="white",
+    activebackground="#505050",
+    activeforeground="white"
+)
+
+copy_button.pack(pady=10)
+
 
 # Make output read-only
 output_text.config(state="disabled")
